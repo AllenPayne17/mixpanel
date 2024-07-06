@@ -1,11 +1,14 @@
 'use client'
 
-import { QueryBuilder } from 'react-querybuilder';
-import 'react-querybuilder/dist/query-builder.css';
+
+// layout
+import UsersHeader from '../../components/layout/users/usersHeader'
 
 export default function Page() {
-  return(
 
-    <QueryBuilder />
+  return(
+    <div>
+      <UsersHeader/>
+    </div>
   )
 }
