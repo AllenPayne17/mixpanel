@@ -84,3 +84,8 @@
       @apply bg-background text-foreground;
     }
   }
+
+  .ruleGroup {
+    @apply  bg-white rounded-lg border-gray-200;
+  }
+  

@@ -3,7 +3,7 @@
 /**
  * Renders the header component for the Users section.
  */
-const usersHeader = () => {
+const UsersHeader = () => {
 
     return(
     <>
@@ -26,4 +26,4 @@ const usersHeader = () => {
     )   
 }
 
-export default usersHeader
+export default UsersHeader
