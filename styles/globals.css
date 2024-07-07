@@ -89,3 +89,7 @@
     @apply  bg-white rounded-lg border-gray-200;
   }
   
+  .queryBuilder > .ruleGroup > .ruleGroup-header{
+    @apply hidden;
+  }
+

@@ -23,6 +23,10 @@ const UsersFilter = () => {
   const [query, setQuery] = useState<RuleGroupType>({
     combinator: 'and',
     rules: [
+      {
+        combinator: 'and',
+        rules: [],
+      }
     ],
   });
 
@@ -36,13 +40,27 @@ const UsersFilter = () => {
         </button>
 
         <div className='flex gap-2'>
-          <button className='text-gray-500 text-xs font-semibold px-2 py-1 rounded hover:bg-blue1/5 hover:text-blue1 active:bg-blue1/5 focus:bg-blue1/5' onClick={() => setQuery({ combinator: 'and', rules: [] })}>
+          <button className='text-gray-500 text-xs font-semibold px-2 py-1 rounded hover:bg-blue1/5 hover:text-blue1 active:bg-blue1/5 focus:bg-blue1/5' onClick={() => setQuery(
+            {
+              combinator: 'and',
+              rules: [
+                {
+                  combinator: 'and',
+                  rules: [],
+                }
+              ],
+            }          
+          )}>
             Clear all
           </button>
           <button className='text-white bg-blue1 text-xs font-semibold px-2 py-1 rounded'>
             Save as
           </button>
         </div>
+      </div>
+      {/* display the query */}
+      <div className='mt-5'>
+        <pre>{JSON.stringify(query, null, 2)}</pre>
       </div>
     </QueryBuilderDnD>
   )
